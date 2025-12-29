@@ -21,6 +21,7 @@ func hasEdge(from, to string) bool {
 }
 
 func main() {
+	example()
 	// 构造示例图
 	addEdge("A", "B")
 	addEdge("A", "C")
@@ -55,4 +56,27 @@ func main() {
 	fmt.Printf("hasEdge(A, B) = %v\n", hasEdge("A", "B"))
 	fmt.Printf("hasEdge(B, A) = %v\n", hasEdge("B", "A"))
 	fmt.Printf("graph: %v\n", graph)
+}
+
+func example() {
+	fmt.Println("example:")
+	m := make(map[string]int)
+
+	m["k1"] = 7
+	m["k2"] = 13
+
+	fmt.Println("map:", m)
+
+	v1 := m["k1"]
+	fmt.Println("v1: ", v1)
+
+	fmt.Println("len:", len(m))
+
+	delete(m, "k2")
+	fmt.Println("m:", m)
+	_, prs := m["k2"]
+	fmt.Println("prs:", prs)
+	fmt.Println("end--------------------------------")
+	n := map[string]int{"foo": 1, "bar": 2}
+	fmt.Println("n:", n)
 }
